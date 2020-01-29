@@ -16,7 +16,7 @@ class HTMLRenderer(QWebView):
         self.app = QApplication([])
         QWebView.__init__(self)
         self.resize(1024, 640)
-        #self.page().setViewportSize(self.size())
+        #self.page().setViewportSize(self.size())  	# TODO: How to do this?
 
     def render_html(self, html):
         self.setHtml(html)
