@@ -2,7 +2,10 @@ import numpy as np
 
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from PyQt5.QtWebKitWidgets import *
+#from PyQt5.QtWebKitWidgets import *
+from PyQt5.QtWebEngineWidgets import QWebEngineView as QWebView,QWebEnginePage as QWebPage
+from PyQt5.QtWebEngineWidgets import QWebEngineSettings as QWebSettings
+
 from PyQt5.QtCore import *
 
 from PIL import Image
@@ -13,7 +16,7 @@ class HTMLRenderer(QWebView):
         self.app = QApplication([])
         QWebView.__init__(self)
         self.resize(1024, 640)
-        self.page().setViewportSize(self.size())
+        #self.page().setViewportSize(self.size())
 
     def render_html(self, html):
         self.setHtml(html)
